@@ -7,20 +7,11 @@ import java.util.Scanner;
 public class Romertall {
 
     public static void main (String args[]){
-        /*
-         I = 1
-         V = 5
-         X = 10
-         L = 50
-         C = 100
-         D = 500
-         M = 1000
-         */
 
         Scanner sc = new Scanner(System.in);
         String romertall;
         int verdi;
-        ArrayList<Integer> romertallVerdier = new ArrayList<>();
+        ArrayList<Integer> romertallVerdier;
 
         System.out.println("Oppgi romertall:");
         romertall = sc.nextLine();
@@ -36,24 +27,30 @@ public class Romertall {
             switch (romertall.charAt(i)){
                 case 'I' :
                     romertallVerdier.add(i, 1);
+                    break;
                 case 'V' :
                     romertallVerdier.add(i, 5);
+                    break;
                 case 'X' :
                     romertallVerdier.add(i, 10);
+                    break;
                 case 'L' :
                     romertallVerdier.add(i, 50);
+                    break;
                 case 'C' :
                     romertallVerdier.add(i, 100);
+                    break;
                 case 'D' :
                     romertallVerdier.add(i, 500);
+                    break;
                 case 'M' :
                     romertallVerdier.add(i, 1000);
+                    break;
                 default:
                     System.out.println(romertall.charAt(i) + " er ikke ett valid romertall.");
+                    break;
             }
         }
-
-        System.out.println(romertallVerdier.toString());
 
         return romertallVerdier;
     }
@@ -67,7 +64,6 @@ public class Romertall {
             }else{
                 sum += romertallVerdier.get(i);
             }
-            System.out.println("romertall position " + i + " er " + romertallVerdier.get(i));
         }
         return sum;
     }
